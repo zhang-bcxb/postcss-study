@@ -1,0 +1,26 @@
+{
+  "name": "postcss-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/style.css -o dist/dist.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "postcss-pxtorem": "^6.0.0"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ]
+}

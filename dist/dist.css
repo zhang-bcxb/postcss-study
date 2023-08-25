@@ -1,0 +1,203 @@
+/* 清除浏览器内外边距 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  /* 子绝父相 */
+  position: relative;
+  /* 占满整个视口 */
+  height: 100vh;
+}
+
+.item {
+  /* 绝对定位 */
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  /* 弹性盒子 */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  /* 水平居中 */
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  /* 垂直居中 */
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  /* 设置字体大小 */
+  font-size: 4.125rem;
+  /* 字体倾斜 */
+  font-style: italic;
+  /* 字体颜色 */
+  color: white;
+  /* 背景向左移动一个页面的距离 */
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.item p {
+  /* 文字向左移动两个页面的距离 */
+  -webkit-transform: translateX(-190%);
+     -moz-transform: translateX(-190%);
+      -ms-transform: translateX(-190%);
+          transform: translateX(-190%);
+  /* 文字间距 */
+  letter-spacing: 0.2em;
+}
+
+.yellow {
+  background-color: rgb(156, 156, 71);
+  /* 开始动画 */
+  -webkit-animation: bg 0.3s linear forwards;
+     -moz-animation: bg 0.3s linear forwards;
+          animation: bg 0.3s linear forwards;
+}
+
+.yellow p {
+  /* 开始动画 forwards定格在最后一帧 */
+  -webkit-animation: text 3s 0.3s cubic-bezier(0, 0.49, 0, 1) forwards;
+     -moz-animation: text 3s 0.3s cubic-bezier(0, 0.49, 0, 1) forwards;
+          animation: text 3s 0.3s cubic-bezier(0, 0.49, 0, 1) forwards;
+}
+
+.blue {
+  background-color: rgb(71, 80, 156);
+  /*  rect(top,right,botton,left) */
+  clip: rect(0, 1100px, 100vh, 0);
+  /* 开始动画 */
+  -webkit-animation: bg 2.4s 0.6s linear forwards;
+     -moz-animation: bg 2.4s 0.6s linear forwards;
+          animation: bg 2.4s 0.6s linear forwards;
+}
+
+.blue p {
+  /* 开始动画 forwards定格在最后一帧 */
+  -webkit-animation: text 2.4s 0.6s cubic-bezier(0, 0.49, 0, 1) forwards;
+     -moz-animation: text 2.4s 0.6s cubic-bezier(0, 0.49, 0, 1) forwards;
+          animation: text 2.4s 0.6s cubic-bezier(0, 0.49, 0, 1) forwards;
+}
+
+.green {
+  background-color: rgb(31, 158, 73);
+  /*  rect(top,right,botton,left) */
+  clip: rect(0, 920px, 100vh, 0);
+  /* 开始动画 */
+  -webkit-animation: bg 2.1s 0.9s linear forwards;
+     -moz-animation: bg 2.1s 0.9s linear forwards;
+          animation: bg 2.1s 0.9s linear forwards;
+}
+
+.green p {
+  /* 开始动画 forwards定格在最后一帧 */
+  -webkit-animation: text 2.1s 0.9s cubic-bezier(0, 0.49, 0, 1) forwards;
+     -moz-animation: text 2.1s 0.9s cubic-bezier(0, 0.49, 0, 1) forwards;
+          animation: text 2.1s 0.9s cubic-bezier(0, 0.49, 0, 1) forwards;
+}
+
+.pink {
+  background-color: rgb(126, 28, 85);
+  /*  rect(top,right,botton,left) */
+  clip: rect(0, 600px, 100vh, 0);
+  /* 开始动画 */
+  -webkit-animation: bg 1.8s 1.2s linear forwards;
+     -moz-animation: bg 1.8s 1.2s linear forwards;
+          animation: bg 1.8s 1.2s linear forwards;
+}
+
+.pink p {
+  /* 开始动画 forwards定格在最后一帧 */
+  -webkit-animation: text 1.8s 1.2s cubic-bezier(0, 0.49, 0, 1) forwards;
+     -moz-animation: text 1.8s 1.2s cubic-bezier(0, 0.49, 0, 1) forwards;
+          animation: text 1.8s 1.2s cubic-bezier(0, 0.49, 0, 1) forwards;
+}
+
+/* 设置背景动画 */
+
+@-webkit-keyframes bg {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-moz-keyframes bg {
+  from {
+    -moz-transform: translateX(-100%);
+         transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(0);
+         transform: translateX(0);
+  }
+}
+
+@keyframes bg {
+  from {
+    -webkit-transform: translateX(-100%);
+       -moz-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/* 设置文字动画 */
+
+@-webkit-keyframes text {
+  from {
+    -webkit-transform: translateX(-190%);
+            transform: translateX(-190%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-moz-keyframes text {
+  from {
+    -moz-transform: translateX(-190%);
+         transform: translateX(-190%);
+  }
+
+  to {
+    -moz-transform: translateX(0);
+         transform: translateX(0);
+  }
+}
+
+@keyframes text {
+  from {
+    -webkit-transform: translateX(-190%);
+       -moz-transform: translateX(-190%);
+            transform: translateX(-190%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
